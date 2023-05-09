@@ -11,7 +11,6 @@ class ImagenController extends Controller
     public function store(Request $request)
     {
         $imagen = $request->file('file');
-        
         $nombreImagen =  Str::uuid() . "." . $imagen->extension();
         $imagenServidor = Image::make($imagen);
         $imagenServidor->fit(1000,1000);
@@ -20,3 +19,6 @@ class ImagenController extends Controller
         return response()->json(['imagen' => $nombreImagen]);
     }
 }
+
+
+

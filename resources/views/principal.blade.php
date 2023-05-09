@@ -1,7 +1,7 @@
 @extends('layout.app')
 
 @section('titulo')
-Productos de zapatos felices
+Productos de Happy Feet
 @endsection
 @section('contenido')
 @if (session('message'))

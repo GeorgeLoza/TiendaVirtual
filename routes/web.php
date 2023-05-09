@@ -81,6 +81,7 @@ Route::post('/imagenes', [ImagenController::class, 'store'])->name('imagenes.sto
 
 
 
+
 /* Detalle_pedido_cliente*/
 Route::get('/detallePedido',[DetallePedidoController::class, 'index'])->name('detallePedido.index');
 Route::post('/detallePedido',[DetallePedidoController::class, 'store'])->name('detallePedido.store');
@@ -89,3 +90,7 @@ Route::delete('/detallePedido/{detallePedido}',[DetallePedidoController::class, 
 
 /*pedido_cliente */
 Route::post('/pedido',[PedidoController::class, 'store'])->name('pedido.store');
+
+/*pedido_empleado*/
+Route::get('/pedido',[PedidoController::class, 'index'])->name('pedido.index');
+Route::put('/pedido/{pedido}',[PedidoController::class, 'update'])->name('pedido.update');

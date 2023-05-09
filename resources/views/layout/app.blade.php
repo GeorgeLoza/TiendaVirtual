@@ -15,7 +15,7 @@
 <body class="bg-gray-100">
     <header class="p-3 border-b bg-white shadow">
         <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-3xl font-black"> Pies Felices</h1>
+            <h1 class="text-3xl font-black"> Happy Feet</h1>
             
             @auth
             <a href="{{route('detallePedido.index')}}"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -41,6 +41,9 @@
                 @if (Auth::check() && Auth::user()->rol === 'Administrador')
                 <a class="font-bold uppercase text-gray-600 text-sm" href="{{route('categoria.index')}}">
                     Categorias
+                </a>
+                <a class="font-bold uppercase text-gray-600 text-sm" href="{{route('pedido.index')}}">
+                    Pedidos
                 </a>
                 <a class="font-bold uppercase text-gray-600 text-sm" href="{{route('proveedor.index')}}">
                     Proveedor
@@ -90,7 +93,7 @@
     </main>
 
     <footer class="text-center p-5 text-gray-500 font-bold uppercase mt-10">
-        Pies felices - Todos los derechos reservados {{now()->year}}
+        Happy Feet - Todos los derechos reservados {{now()->year}}
     </footer>
 
 </body>
